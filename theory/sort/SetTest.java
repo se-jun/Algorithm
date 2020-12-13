@@ -1,4 +1,4 @@
-package _0806;
+package sort;
 
 import java.util.Comparator;
 import java.util.Set;

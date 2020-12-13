@@ -1,4 +1,4 @@
-package com.ssafy.mystudy;
+package Tree;
 
 public class CompleteBinTreeTest {
     public static void main(String[] args) {

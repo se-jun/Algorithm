@@ -1,4 +1,4 @@
-package com.ssafy.mystudy;
+package Union_find;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -19,8 +19,8 @@ public class JO_1863_종교 {
         N = Integer.parseInt(tokens.nextToken());
         M = Integer.parseInt(tokens.nextToken());
 
-        makeSet(n);
-        
+        makeSet(N);
+
         for (int i = 1; i <= M; i++) {
 
             tokens = new StringTokenizer(input.readLine());
@@ -28,7 +28,7 @@ public class JO_1863_종교 {
             a = Integer.parseInt(tokens.nextToken());
             b = Integer.parseInt(tokens.nextToken());
 
-            Union(a, b);
+            union(a, b);
         }
         cnt = 0;
 
@@ -39,19 +39,19 @@ public class JO_1863_종교 {
         }
         System.out.println(cnt);
     }
-    
+
     static void makeSet(int size) {
-        repres = new int[size + 1];
-        for (int i = 1; i < repres.length; i++) {
-            repres[i] = i;
+        arr = new int[size + 1];
+        for (int i = 1; i < arr.length; i++) {
+            arr[i] = i;
         }
     }
 
     static int findSet(int a) {
-        if (repres[a] == a) {
+        if (arr[a] == a) {
             return a;
         } else {
-            return repres[a] = findSet(repres[a]);
+            return arr[a] = findSet(arr[a]);
         }
     }
 
@@ -60,8 +60,8 @@ public class JO_1863_종교 {
         b = findSet(b);
 
         if (a != b) {
-            repres[b] = a;
+            arr[b] = a;
         }
     }
-
+}
 

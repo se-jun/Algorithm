@@ -1,4 +1,4 @@
-package _0806;
+package Greedy;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
